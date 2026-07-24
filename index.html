@@ -455,13 +455,34 @@
         mathjax.id = "MathJax-script";
         mathjax.async = true;
         mathjax.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js";
-        document.head.appendChild(mathjax);
 
-        const viewer = document.createElement("script");
-        viewer.type = "module";
-        viewer.crossOrigin = "";
-        viewer.src = "./assets/index-C7Yyog8u.js";
-        document.body.appendChild(viewer);
+        let viewerLoaded = false;
+        const loadViewer = () => {
+          if (viewerLoaded) return;
+          viewerLoaded = true;
+          const viewer = document.createElement("script");
+          viewer.type = "module";
+          viewer.crossOrigin = "";
+          viewer.src = "./assets/index-C7Yyog8u.js";
+          document.body.appendChild(viewer);
+        };
+
+        mathjax.addEventListener("load", () => {
+          const startup = window.MathJax?.startup?.promise;
+          if (startup && typeof startup.then === "function") {
+            startup.then(loadViewer, () => {
+              delete window.MathJax;
+              loadViewer();
+            });
+          } else {
+            loadViewer();
+          }
+        }, { once: true });
+        mathjax.addEventListener("error", () => {
+          delete window.MathJax;
+          loadViewer();
+        }, { once: true });
+        document.head.appendChild(mathjax);
       }
     </script>
   </body>
