@@ -1,7 +1,7 @@
 """
 Usage:
-    modal run modal_execute.py
-    modal run modal_execute.py --module lecture_06
+    uv run --extra remote modal run modal_execute.py --module lecture_06
+    uv run --extra remote modal run modal_execute.py --module lecture_06 --gpu H100
 """
 
 import glob
@@ -25,33 +25,45 @@ def _ignore(path) -> bool:
 
 image = (
     modal.Image.from_registry("nvidia/cuda:13.2.0-cudnn-devel-ubuntu24.04", add_python="3.11")
-    .pip_install("torch", "numpy", "sympy", "einops", "requests", "beautifulsoup4")
-    .add_local_dir("edtrace/backend", "/root/edtrace_backend", copy=True)
-    .run_commands("pip install /root/edtrace_backend")
+    .pip_install(
+        "edtrace>=0.1.12",
+        "einops>=0.8.2",
+        "mmh3>=5.2.1",
+        "tiktoken>=0.12.0",
+        "torch>=2.11.0,<2.12",
+    )
     .add_local_dir(".", "/root/lectures", ignore=_ignore)
 )
 
 
 @app.function(
     image=image,
-    #gpu="H100",
-    gpu="B200:4",
-    timeout=600,
+    timeout=900,
 )
 def execute(module: str) -> dict[str, str]:
     import subprocess
+    import sys
 
     os.chdir("/root/lectures")
     os.makedirs("var/traces", exist_ok=True)
 
     result = subprocess.run(
-        ["python", f"{module}.py"],
-        #["python", "-m", "edtrace.execute", "-m", module],
-        #["uv", "run", "nsys", "profile", "-w", "true", "-t", "cuda,ntvx", "python", "-m", "edtrace.execute", "-m", module],
+        [
+            sys.executable,
+            "tools/trace_build.py",
+            "build",
+            module,
+            "--device",
+            "cuda" if module == "lecture_06" else "cpu",
+            "--force",
+        ],
+        stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         text=True,
+        check=False,
     )
     if result.returncode != 0:
+        print("STDOUT:", result.stdout)
         print("STDERR:", result.stderr)
         raise RuntimeError(f"edtrace.execute failed with exit code {result.returncode}")
 
@@ -64,9 +76,11 @@ def execute(module: str) -> dict[str, str]:
 
 
 @app.local_entrypoint()
-def main(module: str = "lecture_07"):
-    print(f"Running edtrace.execute on Modal for: {module}")
-    files = execute.remote(module)
+def main(module: str = "lecture_06", gpu: str = "H100"):
+    resource = gpu or "CPU"
+    print(f"Running edtrace.execute on Modal for {module} using {resource}")
+    remote_execute = execute.with_options(gpu=gpu) if gpu else execute
+    files = remote_execute.remote(module)
 
     for path, content in files.items():
         os.makedirs(os.path.dirname(path) or ".", exist_ok=True)

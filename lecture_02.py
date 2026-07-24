@@ -162,7 +162,12 @@ def tensors_memory():
 
     text("Pytorch has an automatic mixed precision (AMP) library. "), link(title="docs", url="https://pytorch.org/docs/stable/amp.html")
     text("Tries to cast things into bf16 when safe (matmuls, not exp).")
-    with torch.amp.autocast("cuda", dtype=torch.bfloat16):
+    amp_device = cuda_if_available()
+    with torch.amp.autocast(
+        amp_device.type,
+        dtype=torch.bfloat16,
+        enabled=amp_device.type == "cuda",
+    ):
         x = torch.zeros(4, 8)  # @inspect x
 
     text("## fp8")

@@ -1,0 +1,13 @@
+**
+!Dockerfile
+!index.html
+!viewer.html
+!assets/
+!assets/**
+!images/
+!images/**
+!var/
+!var/**
+!lecture_*.pdf
+!docker/
+!docker/nginx.conf
