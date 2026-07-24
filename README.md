@@ -134,6 +134,6 @@ Then open `http://localhost:8080/`. The container listens on port 8080 and
 provides `/healthz` for health checks.
 
 Pushes to `main` publish both architectures as
-`ghcr.io/sky-bro/cs336-lectures:latest`. Version tags such as `v1.0.0` also
+`ghcr.io/sky-bro/cs336-lectures-site:latest`. Version tags such as `v1.0.0` also
 publish a matching image tag. The GitHub package must be public, or the NAS
 must be configured with credentials that can pull it.
