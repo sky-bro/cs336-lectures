@@ -10876,12 +10876,6 @@
         },
         {
           "path": "lecture_07.py",
-          "line_number": 413,
-          "function_name": "<listcomp>",
-          "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
-        },
-        {
-          "path": "lecture_07.py",
           "line_number": 594,
           "function_name": "get_init_params",
           "code": "def get_init_params(num_inputs: int, num_outputs: int, rank: int) -> nn.Parameter:"
@@ -10918,12 +10912,6 @@
         },
         {
           "path": "lecture_07.py",
-          "line_number": 413,
-          "function_name": "<listcomp>",
-          "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
-        },
-        {
-          "path": "lecture_07.py",
           "line_number": 596,
           "function_name": "get_init_params",
           "code": "torch.random.manual_seed(0)  # For reproducibility"
@@ -10956,12 +10944,6 @@
           "path": "lecture_07.py",
           "line_number": 413,
           "function_name": "data_parallelism_main",
-          "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
-        },
-        {
-          "path": "lecture_07.py",
-          "line_number": 413,
-          "function_name": "<listcomp>",
           "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
         },
         {
@@ -10999,11 +10981,35 @@
           "line_number": 413,
           "function_name": "data_parallelism_main",
           "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
+        }
+      ],
+      "env": {},
+      "renderings": []
+    },
+    {
+      "stack": [
+        {
+          "path": "lecture_07.py",
+          "line_number": 55,
+          "function_name": "main",
+          "code": "data_parallelism()         # Cut up along the batch dimension"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 380,
+          "function_name": "data_parallelism",
+          "code": "spawn(data_parallelism_main, world_size=4, data=data, num_layers=4, num_steps=1)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 591,
+          "function_name": "spawn",
+          "code": "func(*args)"
         },
         {
           "path": "lecture_07.py",
           "line_number": 413,
-          "function_name": "<listcomp>",
+          "function_name": "data_parallelism_main",
           "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
         },
         {
@@ -11044,12 +11050,6 @@
         },
         {
           "path": "lecture_07.py",
-          "line_number": 413,
-          "function_name": "<listcomp>",
-          "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
-        },
-        {
-          "path": "lecture_07.py",
           "line_number": 596,
           "function_name": "get_init_params",
           "code": "torch.random.manual_seed(0)  # For reproducibility"
@@ -11082,12 +11082,6 @@
           "path": "lecture_07.py",
           "line_number": 413,
           "function_name": "data_parallelism_main",
-          "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
-        },
-        {
-          "path": "lecture_07.py",
-          "line_number": 413,
-          "function_name": "<listcomp>",
           "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
         },
         {
@@ -11125,11 +11119,35 @@
           "line_number": 413,
           "function_name": "data_parallelism_main",
           "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
+        }
+      ],
+      "env": {},
+      "renderings": []
+    },
+    {
+      "stack": [
+        {
+          "path": "lecture_07.py",
+          "line_number": 55,
+          "function_name": "main",
+          "code": "data_parallelism()         # Cut up along the batch dimension"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 380,
+          "function_name": "data_parallelism",
+          "code": "spawn(data_parallelism_main, world_size=4, data=data, num_layers=4, num_steps=1)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 591,
+          "function_name": "spawn",
+          "code": "func(*args)"
         },
         {
           "path": "lecture_07.py",
           "line_number": 413,
-          "function_name": "<listcomp>",
+          "function_name": "data_parallelism_main",
           "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
         },
         {
@@ -11170,12 +11188,6 @@
         },
         {
           "path": "lecture_07.py",
-          "line_number": 413,
-          "function_name": "<listcomp>",
-          "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
-        },
-        {
-          "path": "lecture_07.py",
           "line_number": 596,
           "function_name": "get_init_params",
           "code": "torch.random.manual_seed(0)  # For reproducibility"
@@ -11208,12 +11220,6 @@
           "path": "lecture_07.py",
           "line_number": 413,
           "function_name": "data_parallelism_main",
-          "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
-        },
-        {
-          "path": "lecture_07.py",
-          "line_number": 413,
-          "function_name": "<listcomp>",
           "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
         },
         {
@@ -11251,11 +11257,35 @@
           "line_number": 413,
           "function_name": "data_parallelism_main",
           "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
+        }
+      ],
+      "env": {},
+      "renderings": []
+    },
+    {
+      "stack": [
+        {
+          "path": "lecture_07.py",
+          "line_number": 55,
+          "function_name": "main",
+          "code": "data_parallelism()         # Cut up along the batch dimension"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 380,
+          "function_name": "data_parallelism",
+          "code": "spawn(data_parallelism_main, world_size=4, data=data, num_layers=4, num_steps=1)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 591,
+          "function_name": "spawn",
+          "code": "func(*args)"
         },
         {
           "path": "lecture_07.py",
           "line_number": 413,
-          "function_name": "<listcomp>",
+          "function_name": "data_parallelism_main",
           "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
         },
         {
@@ -11296,12 +11326,6 @@
         },
         {
           "path": "lecture_07.py",
-          "line_number": 413,
-          "function_name": "<listcomp>",
-          "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
-        },
-        {
-          "path": "lecture_07.py",
           "line_number": 596,
           "function_name": "get_init_params",
           "code": "torch.random.manual_seed(0)  # For reproducibility"
@@ -11334,12 +11358,6 @@
           "path": "lecture_07.py",
           "line_number": 413,
           "function_name": "data_parallelism_main",
-          "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
-        },
-        {
-          "path": "lecture_07.py",
-          "line_number": 413,
-          "function_name": "<listcomp>",
           "code": "params = [get_init_params(num_dim, num_dim, rank) for layer in range(num_layers)]"
         },
         {
@@ -12217,6 +12235,210 @@
           "line_number": 432,
           "function_name": "data_parallelism_main",
           "code": "optimizer.step()"
+        }
+      ],
+      "env": {},
+      "renderings": []
+    },
+    {
+      "stack": [
+        {
+          "path": "lecture_07.py",
+          "line_number": 55,
+          "function_name": "main",
+          "code": "data_parallelism()         # Cut up along the batch dimension"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 380,
+          "function_name": "data_parallelism",
+          "code": "spawn(data_parallelism_main, world_size=4, data=data, num_layers=4, num_steps=1)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 591,
+          "function_name": "spawn",
+          "code": "func(*args)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 434,
+          "function_name": "data_parallelism_main",
+          "code": "print(f\"[data_parallelism] Rank {rank}: step = {step}, loss = {loss.item()}, params = {[summarize_tensor(params[layer]) for layer in range(num_layers)]}\", flush=True)  # @stepover"
+        }
+      ],
+      "env": {},
+      "renderings": []
+    },
+    {
+      "stack": [
+        {
+          "path": "lecture_07.py",
+          "line_number": 55,
+          "function_name": "main",
+          "code": "data_parallelism()         # Cut up along the batch dimension"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 380,
+          "function_name": "data_parallelism",
+          "code": "spawn(data_parallelism_main, world_size=4, data=data, num_layers=4, num_steps=1)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 591,
+          "function_name": "spawn",
+          "code": "func(*args)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 434,
+          "function_name": "data_parallelism_main",
+          "code": "print(f\"[data_parallelism] Rank {rank}: step = {step}, loss = {loss.item()}, params = {[summarize_tensor(params[layer]) for layer in range(num_layers)]}\", flush=True)  # @stepover"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 606,
+          "function_name": "summarize_tensor",
+          "code": "def summarize_tensor(tensor: tensor) -> str:"
+        }
+      ],
+      "env": {},
+      "renderings": []
+    },
+    {
+      "stack": [
+        {
+          "path": "lecture_07.py",
+          "line_number": 55,
+          "function_name": "main",
+          "code": "data_parallelism()         # Cut up along the batch dimension"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 380,
+          "function_name": "data_parallelism",
+          "code": "spawn(data_parallelism_main, world_size=4, data=data, num_layers=4, num_steps=1)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 591,
+          "function_name": "spawn",
+          "code": "func(*args)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 434,
+          "function_name": "data_parallelism_main",
+          "code": "print(f\"[data_parallelism] Rank {rank}: step = {step}, loss = {loss.item()}, params = {[summarize_tensor(params[layer]) for layer in range(num_layers)]}\", flush=True)  # @stepover"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 607,
+          "function_name": "summarize_tensor",
+          "code": "return \"x\".join(map(str, tensor.shape)) + \"[\" + str(round(tensor.view(-1)[0].item(), 4)) + \"...]\""
+        }
+      ],
+      "env": {},
+      "renderings": []
+    },
+    {
+      "stack": [
+        {
+          "path": "lecture_07.py",
+          "line_number": 55,
+          "function_name": "main",
+          "code": "data_parallelism()         # Cut up along the batch dimension"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 380,
+          "function_name": "data_parallelism",
+          "code": "spawn(data_parallelism_main, world_size=4, data=data, num_layers=4, num_steps=1)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 591,
+          "function_name": "spawn",
+          "code": "func(*args)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 434,
+          "function_name": "data_parallelism_main",
+          "code": "print(f\"[data_parallelism] Rank {rank}: step = {step}, loss = {loss.item()}, params = {[summarize_tensor(params[layer]) for layer in range(num_layers)]}\", flush=True)  # @stepover"
+        }
+      ],
+      "env": {},
+      "renderings": []
+    },
+    {
+      "stack": [
+        {
+          "path": "lecture_07.py",
+          "line_number": 55,
+          "function_name": "main",
+          "code": "data_parallelism()         # Cut up along the batch dimension"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 380,
+          "function_name": "data_parallelism",
+          "code": "spawn(data_parallelism_main, world_size=4, data=data, num_layers=4, num_steps=1)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 591,
+          "function_name": "spawn",
+          "code": "func(*args)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 434,
+          "function_name": "data_parallelism_main",
+          "code": "print(f\"[data_parallelism] Rank {rank}: step = {step}, loss = {loss.item()}, params = {[summarize_tensor(params[layer]) for layer in range(num_layers)]}\", flush=True)  # @stepover"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 606,
+          "function_name": "summarize_tensor",
+          "code": "def summarize_tensor(tensor: tensor) -> str:"
+        }
+      ],
+      "env": {},
+      "renderings": []
+    },
+    {
+      "stack": [
+        {
+          "path": "lecture_07.py",
+          "line_number": 55,
+          "function_name": "main",
+          "code": "data_parallelism()         # Cut up along the batch dimension"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 380,
+          "function_name": "data_parallelism",
+          "code": "spawn(data_parallelism_main, world_size=4, data=data, num_layers=4, num_steps=1)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 591,
+          "function_name": "spawn",
+          "code": "func(*args)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 434,
+          "function_name": "data_parallelism_main",
+          "code": "print(f\"[data_parallelism] Rank {rank}: step = {step}, loss = {loss.item()}, params = {[summarize_tensor(params[layer]) for layer in range(num_layers)]}\", flush=True)  # @stepover"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 607,
+          "function_name": "summarize_tensor",
+          "code": "return \"x\".join(map(str, tensor.shape)) + \"[\" + str(round(tensor.view(-1)[0].item(), 4)) + \"...]\""
         }
       ],
       "env": {},
@@ -13157,12 +13379,6 @@
         },
         {
           "path": "lecture_07.py",
-          "line_number": 459,
-          "function_name": "<listcomp>",
-          "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
-        },
-        {
-          "path": "lecture_07.py",
           "line_number": 594,
           "function_name": "get_init_params",
           "code": "def get_init_params(num_inputs: int, num_outputs: int, rank: int) -> nn.Parameter:"
@@ -13199,12 +13415,6 @@
         },
         {
           "path": "lecture_07.py",
-          "line_number": 459,
-          "function_name": "<listcomp>",
-          "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
-        },
-        {
-          "path": "lecture_07.py",
           "line_number": 596,
           "function_name": "get_init_params",
           "code": "torch.random.manual_seed(0)  # For reproducibility"
@@ -13237,12 +13447,6 @@
           "path": "lecture_07.py",
           "line_number": 459,
           "function_name": "tensor_parallelism_main",
-          "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
-        },
-        {
-          "path": "lecture_07.py",
-          "line_number": 459,
-          "function_name": "<listcomp>",
           "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
         },
         {
@@ -13280,11 +13484,35 @@
           "line_number": 459,
           "function_name": "tensor_parallelism_main",
           "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
+        }
+      ],
+      "env": {},
+      "renderings": []
+    },
+    {
+      "stack": [
+        {
+          "path": "lecture_07.py",
+          "line_number": 56,
+          "function_name": "main",
+          "code": "tensor_parallelism()       # Cut up along the width dimension"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 444,
+          "function_name": "tensor_parallelism",
+          "code": "spawn(tensor_parallelism_main, world_size=4, data=data, num_layers=4)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 591,
+          "function_name": "spawn",
+          "code": "func(*args)"
         },
         {
           "path": "lecture_07.py",
           "line_number": 459,
-          "function_name": "<listcomp>",
+          "function_name": "tensor_parallelism_main",
           "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
         },
         {
@@ -13325,12 +13553,6 @@
         },
         {
           "path": "lecture_07.py",
-          "line_number": 459,
-          "function_name": "<listcomp>",
-          "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
-        },
-        {
-          "path": "lecture_07.py",
           "line_number": 596,
           "function_name": "get_init_params",
           "code": "torch.random.manual_seed(0)  # For reproducibility"
@@ -13363,12 +13585,6 @@
           "path": "lecture_07.py",
           "line_number": 459,
           "function_name": "tensor_parallelism_main",
-          "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
-        },
-        {
-          "path": "lecture_07.py",
-          "line_number": 459,
-          "function_name": "<listcomp>",
           "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
         },
         {
@@ -13406,11 +13622,35 @@
           "line_number": 459,
           "function_name": "tensor_parallelism_main",
           "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
+        }
+      ],
+      "env": {},
+      "renderings": []
+    },
+    {
+      "stack": [
+        {
+          "path": "lecture_07.py",
+          "line_number": 56,
+          "function_name": "main",
+          "code": "tensor_parallelism()       # Cut up along the width dimension"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 444,
+          "function_name": "tensor_parallelism",
+          "code": "spawn(tensor_parallelism_main, world_size=4, data=data, num_layers=4)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 591,
+          "function_name": "spawn",
+          "code": "func(*args)"
         },
         {
           "path": "lecture_07.py",
           "line_number": 459,
-          "function_name": "<listcomp>",
+          "function_name": "tensor_parallelism_main",
           "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
         },
         {
@@ -13451,12 +13691,6 @@
         },
         {
           "path": "lecture_07.py",
-          "line_number": 459,
-          "function_name": "<listcomp>",
-          "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
-        },
-        {
-          "path": "lecture_07.py",
           "line_number": 596,
           "function_name": "get_init_params",
           "code": "torch.random.manual_seed(0)  # For reproducibility"
@@ -13489,12 +13723,6 @@
           "path": "lecture_07.py",
           "line_number": 459,
           "function_name": "tensor_parallelism_main",
-          "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
-        },
-        {
-          "path": "lecture_07.py",
-          "line_number": 459,
-          "function_name": "<listcomp>",
           "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
         },
         {
@@ -13532,11 +13760,35 @@
           "line_number": 459,
           "function_name": "tensor_parallelism_main",
           "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
+        }
+      ],
+      "env": {},
+      "renderings": []
+    },
+    {
+      "stack": [
+        {
+          "path": "lecture_07.py",
+          "line_number": 56,
+          "function_name": "main",
+          "code": "tensor_parallelism()       # Cut up along the width dimension"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 444,
+          "function_name": "tensor_parallelism",
+          "code": "spawn(tensor_parallelism_main, world_size=4, data=data, num_layers=4)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 591,
+          "function_name": "spawn",
+          "code": "func(*args)"
         },
         {
           "path": "lecture_07.py",
           "line_number": 459,
-          "function_name": "<listcomp>",
+          "function_name": "tensor_parallelism_main",
           "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
         },
         {
@@ -13577,12 +13829,6 @@
         },
         {
           "path": "lecture_07.py",
-          "line_number": 459,
-          "function_name": "<listcomp>",
-          "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
-        },
-        {
-          "path": "lecture_07.py",
           "line_number": 596,
           "function_name": "get_init_params",
           "code": "torch.random.manual_seed(0)  # For reproducibility"
@@ -13615,12 +13861,6 @@
           "path": "lecture_07.py",
           "line_number": 459,
           "function_name": "tensor_parallelism_main",
-          "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
-        },
-        {
-          "path": "lecture_07.py",
-          "line_number": 459,
-          "function_name": "<listcomp>",
           "code": "params = [get_init_params(num_dim, local_num_dim, rank) for layer in range(num_layers)]"
         },
         {
@@ -15158,6 +15398,144 @@
           "shape": null
         }
       },
+      "renderings": []
+    },
+    {
+      "stack": [
+        {
+          "path": "lecture_07.py",
+          "line_number": 57,
+          "function_name": "main",
+          "code": "pipeline_parallelism()     # Cut up along the depth dimension"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 489,
+          "function_name": "pipeline_parallelism",
+          "code": "spawn(pipeline_parallelism_main, world_size=2, data=data, num_layers=4, num_micro_batches=4)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 591,
+          "function_name": "spawn",
+          "code": "func(*args)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 504,
+          "function_name": "pipeline_parallelism_main",
+          "code": "local_params = [get_init_params(num_dim, num_dim, rank) for layer in range(local_num_layers)]  # @stepover"
+        }
+      ],
+      "env": {},
+      "renderings": []
+    },
+    {
+      "stack": [
+        {
+          "path": "lecture_07.py",
+          "line_number": 57,
+          "function_name": "main",
+          "code": "pipeline_parallelism()     # Cut up along the depth dimension"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 489,
+          "function_name": "pipeline_parallelism",
+          "code": "spawn(pipeline_parallelism_main, world_size=2, data=data, num_layers=4, num_micro_batches=4)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 591,
+          "function_name": "spawn",
+          "code": "func(*args)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 504,
+          "function_name": "pipeline_parallelism_main",
+          "code": "local_params = [get_init_params(num_dim, num_dim, rank) for layer in range(local_num_layers)]  # @stepover"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 594,
+          "function_name": "get_init_params",
+          "code": "def get_init_params(num_inputs: int, num_outputs: int, rank: int) -> nn.Parameter:"
+        }
+      ],
+      "env": {},
+      "renderings": []
+    },
+    {
+      "stack": [
+        {
+          "path": "lecture_07.py",
+          "line_number": 57,
+          "function_name": "main",
+          "code": "pipeline_parallelism()     # Cut up along the depth dimension"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 489,
+          "function_name": "pipeline_parallelism",
+          "code": "spawn(pipeline_parallelism_main, world_size=2, data=data, num_layers=4, num_micro_batches=4)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 591,
+          "function_name": "spawn",
+          "code": "func(*args)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 504,
+          "function_name": "pipeline_parallelism_main",
+          "code": "local_params = [get_init_params(num_dim, num_dim, rank) for layer in range(local_num_layers)]  # @stepover"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 596,
+          "function_name": "get_init_params",
+          "code": "torch.random.manual_seed(0)  # For reproducibility"
+        }
+      ],
+      "env": {},
+      "renderings": []
+    },
+    {
+      "stack": [
+        {
+          "path": "lecture_07.py",
+          "line_number": 57,
+          "function_name": "main",
+          "code": "pipeline_parallelism()     # Cut up along the depth dimension"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 489,
+          "function_name": "pipeline_parallelism",
+          "code": "spawn(pipeline_parallelism_main, world_size=2, data=data, num_layers=4, num_micro_batches=4)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 591,
+          "function_name": "spawn",
+          "code": "func(*args)"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 504,
+          "function_name": "pipeline_parallelism_main",
+          "code": "local_params = [get_init_params(num_dim, num_dim, rank) for layer in range(local_num_layers)]  # @stepover"
+        },
+        {
+          "path": "lecture_07.py",
+          "line_number": 597,
+          "function_name": "get_init_params",
+          "code": "return nn.Parameter(torch.randn(num_inputs, num_outputs, device=cuda_if_available(rank)) / math.sqrt(num_outputs))"
+        }
+      ],
+      "env": {},
       "renderings": []
     },
     {
